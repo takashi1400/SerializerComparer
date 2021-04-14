@@ -17,14 +17,14 @@ namespace SerializerComparer
         /// whether output as html or not.
         /// HTML形式で出力するかどうか
         /// </summary>
-        public bool asHtml;
+        public bool AsHtml { get; set; }
 
         /// <summary>
         /// specifies where to output.
         /// 出力ファイル先の指定。
         /// 指定がなければコンソールに出力します。
         /// </summary>
-        public string filepath;
+        public string FilePath { get; set; }
 
     };
 
@@ -57,7 +57,7 @@ namespace SerializerComparer
 
             string result = "";
 
-            if (comparerOptions?.asHtml ?? false)
+            if (comparerOptions?.AsHtml ?? false)
             {
                 result = dmp.diff_prettyHtml(diff);
             }
@@ -67,13 +67,13 @@ namespace SerializerComparer
             }
 
             //if the file is empty, write to console.
-            if (string.IsNullOrEmpty(comparerOptions?.filepath))
+            if (string.IsNullOrEmpty(comparerOptions?.FilePath))
             {
                 Console.WriteLine(result);
             }
             else
             {
-                using (StreamWriter sw = new StreamWriter(comparerOptions.filepath))
+                using (StreamWriter sw = new StreamWriter(comparerOptions.FilePath))
                 {
                     sw.Write(result);
                 }

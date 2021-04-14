@@ -1,5 +1,8 @@
 # SerializerComparer
 
+## Environment
+- .NETCore 3.1.0
+
 ## Purpose
 Compare any type of object and output as json.
 
@@ -39,8 +42,8 @@ Compare any type of object and output as json.
     };
     var serializerCompareOptions = new SerializerComparerOptions()
     {
-        filepath = "test.html",
-        asHtml = true
+        FilePath = "test.html",
+        AsHtml = true
     };
 
     SerializerComparer<TestClass>.Compare(TestA, TestB, options, serializerCompareOptions);
