@@ -49,7 +49,11 @@ Compare any type of object and output as json.
     SerializerComparer<TestClass>.Compare(TestA, TestB, options, serializerCompareOptions);
 
 ```
-## 結果
+## Result
 test.html
 <span>{&para;<br>  "a": "</span><del style="background:#ffe6e6;">aiue</del><ins style="background:#e6ffe6;">kakikukek</ins><span>o",&para;<br>  "b": </span><del style="background:#ffe6e6;">0</del><ins style="background:#e6ffe6;">1</ins><span>,&para;<br>  "c": [&para;<br>    "</span><del style="background:#ffe6e6;">asdfg</del><ins style="background:#e6ffe6;">qwert</ins><span>",&para;<br>    "hjk"&para;<br>  ]&para;<br>}</span>
 
+
+## Libraries
+This Program uses [diff-match-patch](https://github.com/google/diff-match-patch) as Comparing Engine.
+比較エンジンにはgoogle社の[diff-match-patch](https://github.com/google/diff-match-patch)を使用しています。
